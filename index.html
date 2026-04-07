@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>Course Registration System</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h2>Student Registration Form</h2>
+<form id="myForm">
+ <div class="form-container">
+ <div class="form-left">
+ <label>Name</label>
+ <input type="text" id="name">
+ <label>Email</label>
+ <input type="text" id="email">
+ <label>Phone</label>
+ <input type="text" id="phone">
+ <label>Roll No</label>
+ <input type="text" id="rollno">
+ </div>
+ <div class="form-right">
+ <label>Batch</label>
+ <select id="batch">
+ <option value="">Select Batch</option>
+ <option>2022–26</option>
+ <option>2023–27</option>
+ <option>2024–28</option>
+ </select>
+ <label>Department</label>
+ <input type="text" id="department">
+ <label>Academic Year</label>
+ <select id="year">
+ <option value="">Select Year</option>
+ <option>2023–24</option>
+ <option>2024–25</option>
+ <option>2025–26</option>
+ </select>
+ <label>Section</label>
+ <select id="section">
+ <option value="">Select Section</option>
+ <option>A</option>
+ <option>B</option>
+ <option>C</option>
+ </select>
+ </div>
+ </div>
+ <p id="error"></p>
+</form>
+<hr>
+<h3>Select Courses (Total Credits = 22)</h3>
+<table>
+ <tr>
+ <th>Select</th>
+ <th>Course Code</th>
+ <th>Course Name</th>
+ <th>Credits</th>
+ </tr>
+ <tr>
+ <td><input type="checkbox" class="course" data-credit="2"></td>
+ <td>HS103P</td>
+ <td>Basic Proficiency in Japanese</td>
+ <td>2</td>
+ </tr>
+ <tr>
+ <td><input type="checkbox" class="course" data-credit="3"></td>
+ <td>EC201L</td>
+ <td>Computer Organization</td>
+ <td>3</td>
+ </tr>
+ <tr>
+ <td><input type="checkbox" class="course" data-credit="1"></td>
+ <td>EC201P</td>
+ <td>Computer Organization Lab</td>
+ <td>1</td>
+ </tr>
+ <tr>
+ <td><input type="checkbox" class="course" data-credit="4"></td>
+ <td>CS201B</td>
+ <td>Data Structure</td>
+ <td>4</td>
+ </tr>
+ <tr>
+ <td><input type="checkbox" class="course" data-credit="4"></td>
+ <td>MA103L</td>
+ <td>Linear Algebra</td>
+ <td>4</td>
+ </tr>
+ <tr>
+ <td><input type="checkbox" class="course" data-credit="3"></td>
+ <td>CH101L</td>
+ <td>Environmental Chemistry</td>
+ <td>3</td>
+ </tr>
+ <tr>
+ <td><input type="checkbox" class="course" data-credit="5"></td>
+ <td>IT104P</td>
+ <td>Innovation Project</td>
+ <td>5</td>
+ </tr>
+</table>
+<p><b>Total Credits Selected:</b> <span id="total">0</span></p>
+<button id="courseSubmit">Generate Registration Slip</button>
+<p id="courseError"></p>
+<hr>
+<!-- REGISTRATION SLIP -->
+<div id="slip">
+ <h2 style="text-align:center;">COURSE REGISTRATION SLIP</h2>
+ <p><b>Name:</b> <span id="sName"></span></p>
+ <p><b>Roll No:</b> <span id="sRoll"></span></p>
+ <p><b>Department:</b> <span id="sDept"></span></p>
+ <p><b>Batch:</b> <span id="sBatch"></span></p>
+ <p><b>Academic Year:</b> <span id="sYear"></span></p>
+ <p><b>Section:</b> <span id="sSection"></span></p>
+ <h3>Registered Courses</h3>
+ <ul id="courseList"></ul>
+ <p><b>Total Credits:</b> <span id="finalCredits"></span></p>
+ <p><b>Generated On:</b> <span id="date"></span></p>
+</div>
+<script src="script.js"></script>
+</body>
