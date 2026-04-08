@@ -22,7 +22,7 @@ CodeCommit → CodeBuild → CodePipeline → CodeDeploy → EC2
 (Add screenshots here)
 
 ## 🌐 Live Demo
-http://<your-ec2-public-ip>
+http://13.126.159.77/
 
 ## 💡 Learnings
 - CI/CD pipeline creation
